@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Verkefni 5</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="sidebar">
+    <ul>
+      <li><a href="index.html">Heim</a></li>
+      <li><a href="about.html">Um mig</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Einstaklingsverkefni</a>
+        <div class="dropdown-content">
+          <a href="V1.html">V1 - Vefsíðan mín</a>
+          <a href="V2.html">V2 - Tölvustuddur skurður</a>
+          <a href="V3.html">V3 - 3D prentun og skönnun</a>
+          <a href="V4.html">V4 - Að fræsa eitthvað stórt</a>
+          <a href="V5.html">V5 - Að fræsa og undirbúa mót</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Hópverkefni</a>
+        <div class="dropdown-content">
+          <a href="H1.html">V2 - Kerf prófun fyrir tölvustuddan skurð</a>
+          <a href="H2.html">V3 - Prófun fyrir 3D prentun</a>
+          <a href="H4.html">V4 - Að fræsa eitthvað stórt</a>
+          <a href="H5.html">V5 - Að fræsa og undirbúa mót</a>
+          <a href="V6.html">V6 - Lokaverkefni</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <br>
+  <h1>Verkefni 5 - Að fræsa og undirbúa mót</h1>
+  <p>Í verkefni 5 átti að hanna, teikna, undirbúa og fræsa mót. Vegna covid takmarkana var ekki hægt að fræsa mótið, en í staðinn átti að skila simulation af framleiðslunni. Hópurinn samanstóð enn og aftur af Birtu, Davíð og Elísu. Verkefninu var skipt á milli hópmeðlima á þann hátt að Birta teiknaði hlutinn okkar, Davíð teiknaði pósitívu og negatívu til að gera mót fyrir hlutinn og ég sá um að gera toolpaths og simulation fyrir framleiðslu, ásamt því að skrásetja verkefnið á sameiginlega vefsíðu.</p>
+  <hr>
+  <br>
+  <h2>Hönnun og teikning</h2>
+  <p><a href="https://birtah.github.io/Website-VEL403G/EV5.html" class="button">Vefsíða Birtu</a></p>
+  <hr>
+  <br>
+  <h2>Útfærsla á móti</h2>
+  <p><a href="https://davidrunar.github.io/vefsidanmin/verkefni5.html" class="button">Vefsíða Davíðs</a></p>
+  <hr>
+  <br>
+  <h2>Toolpaths og simulation</h2>
+  <p>Til að gera skurðferla (e. toolpaths) fyrir fræsinn til að framleiða mótið fyrir klakaformið var stuðst við myndbönd <a href="https://www.youtube.com/watch?v=whGKwsEY4Vo">1</a> og <a href="https://www.youtube.com/watch?v=Bd6-BQUCbVA&t=1001s">2</a> </p>
+  <p>Teikningin af mótinu var fengin frá Davíð og til að hefja skurðferlagerð var byrjað á að smella á "Design" hnappinn efst í vinstra horninu og velja þar "Manufacture". Inni í "Manufacture" var valið "New setup" undir "Setup" valstikunni. Inni í setupinu þurfti að velja og stilla núllpunkt fyrir x, y og z ás. Þetta skiptir máli fyrir fræsinn þegar verið er að fara að framleiða hlutinn. Ásarnir voru stilltir á þann hátt sem sjá má á myndinni hér að neðan:</p>
+  <img class="timi" src="V5-img/asar.png" alt="">
+  <p>Því næst var komið að því að velja og gera skurðferla. Til að komast að réttum ferlum þurfti aðeins að prófa sig áfram, sem reyndist ansi tímafrekt. Til aðstoðar var notast við Google og til dæmis leitað eftir "CAM in fusion 360 complex shapes". Þessi <a href="https://www.autodesk.com/products/fusion-360/blog/fusion-360-surfaces-machine-complex-geometries/">síða</a> kom til dæmis að góðum notum.</p>
+  <p>Niðurstaðan var að "Adaptive clearing", undir 3D valstikunni kom best út til að fræsa út mótið. Gerðir voru þrír mismunandi skurðferlar; einn fyrir neðri hluta mótsins, einn fyrir topphlutann af efri hluta mótsins og sá síðasti fyrir snjókornin í efri hluta mótsins.</p>
+  <p>Til að gera skurðferil með "Adaptive clearing" aðferðinni þurfti að byrja á að velja "Tool" sem fræsirinn notar til að fræsa. Smellt er á Select... hjá Tool, sem er það fyrsta sem sést eftir að "Adaptive clearing" er valið. Coolant er valið sem "Suction" eins og á fræsinum í FabLab.</p>
+  <img class="profun" src="V5-img/select.png" alt="">
+  <p>Eftir að smellt er á Select opnast gluggi og í honum þarf að smella á plúsinn sem er ofarlega vinstra megin. Þá opnast eftirfarandi gluggi:</p>
+  <img class="param" src="V5-img/tools.png" alt="">
+  <p>Þarna þarf að velja viðeigandi tól. Fyrir þetta verkefni var áætlað að fræsingin færi fram með bita með flötum haus, eins og raunin var í <a href="https://elisaosk.github.io/VefsidanMin/V4.html">verkefni 4</a>. Því var valið "Flat end mill". Þegar það er valið opnast gluggi og undir "Cutter" í þeim glugga eru eftirfarandi valmöguleikar: </p>
+  <img class="param" src="V5-img/flathead.png" alt="">
+  <p>Þarna þurfti að velja hversu breiður bitinn var. Þykktin var einfaldlega valin með því að prófa sig áfram, það þurfti að finna gott jafnvægi á milli hraðrar og nákvæmrar framleiðslu. Niðurstaðan var sú að fyrir fyrsta skurðferilinn, sem var fyrir neðri hluta mótsins, var valinn 3 mm þykkur biti. Sama stærð var valin fyrir næsta skurðferil, sem var fyrir hluta af efri hluta mótsins. Erfiðast var að finna stærð á bita til að fræsa út snjókornin, því þau voru með mikil smáatriði. Niðurstaðan var að nota þurfti 0.8mm þykkan bita til að skera þau út. Nú eru eflaust einhverjir hugsi, þar sem þetta er mjög þunnur biti. Staðreyndin var einfaldlega sú að ef valinn var stærri biti var ekki hægt að skera snjókornin út.</p>
+  <p>Það næsta sem þurfti að stilla í valmyndinni fyrir "Adaptive clearing" var að velja hvaða part átti að fræsa. Sjá mynd:</p>
+  <img class="halft" src="V5-img/botn.png" alt="">
+  <p>Fyrir fyrsta skurðferilinn var græni ramminn valinn og svo var "Tool containment" stillt á "Tool inside boundary". Þá fjarlægði fræsirinn allt sem fjarlægja átti innan græna rammans. Ekki voru settar inn fleiri stillingar fyrir þennan skurðferil, en sjá má myndband af hermun fyrsta skurðferilsins hér að neðan.</p>
+  <br>
+  <iframe width="1000px" height="570px" allowfullscreen="true" src="https://haskoliislands.instructuremedia.com/embed/38d899b9-b8e7-49ec-a02a-37eff9a9c4ec" frameborder="0"></iframe>
+  <br>
+  <p>Fyrir næsta skurðferil var Tool og svæðið sem fræsa átti valið á sama hátt og fyrir skurðferilinn á undan. Valinn var rammi og stillt á að fræsa ætti innan hans. Ekki voru aðrar stillingar settar inn fyrir þennan skurðarferil, en sjá má myndband af hermun hans hér að neðan:</p>
+  <br>
+  <iframe width="1000px" height="570px" allowfullscreen="true" src="https://haskoliislands.instructuremedia.com/embed/e64edb6d-7e8c-4bf2-abb2-8aff52390297" frameborder="0"></iframe>
+  <br>
+  <p>Þriðji og síðasti skurðarferillinn var heldur flóknari í útfærslu. Svæðið sem fræsa átti og "Tool" var valið á sama hátt og áður, en nú var bitinn 0.8mm í þvermál. Reynt var að gera skurðferilinn ótal mörgu sinnum á mismunandi vegu, með mis góðum árangri. Tölvan var lengi að reikna skurðarferlana út í hvert skipti, sem gerði þetta ferli mjög tímafrekt. Aðvörun sem fékkst gjarnan eftir að skurðarferillinn hafði verið að "processast" í langan tíma var: "Warning: Rest material adjustment reduced to maximum limit". Þetta var vandamál sem þurfti að googla og fékkst lausn á vandamálinu á þessari <a href="https://forums.autodesk.com/t5/fusion-360-manufacture/warning-rest-material-adjustment-reduced-to-maximum-limit/td-p/7118380">síðu</a>. Þá, í stillingunum á "Adaptive clearing", þurfti til viðbótar við að velja svæðið sem fræsa átti að setja inn eftirfarandi stillingar í "Rest Machining" undir "Geometry" valglugganum: </p>
+  <img class="profun" src="V5-img/rest.png" alt="">
+  <p>Á þennan hátt tók þessi skurðarferill tillit til skurðarferilsins á undan, sem var nauðsynlegt í þessu tilfelli. Þar sem bitinn sem notaður var til að fræsa út snjókornin var einungis 0.8mm að þvermáli tók fræsingin á þessum hluta mjög langan tíma. Niðurstöðuna má sjá í eftirfarandi myndbandi:</p>
+  <iframe width="1000px" height="570px" allowfullscreen="true" src="https://haskoliislands.instructuremedia.com/embed/ccb36861-de31-46d0-b810-97805ea6adc6" frameborder="0"></iframe>
+  <br>
+  <hr>
+  <br>
+  <h2>Niðurstaða</h2>
+  <p>Eftir að allir þrír skurðferlarnir voru tilbúnir og búið var að herma framleiðsluna á hverjum og einum var tekið upp myndband af hermun á öllum ferlunum í einu. Það má sjá hér að neðan. Eins og sjá má í myndbandinu er Fusion360 ansi þungt fyrir tölvuna sem verkefnið var framkvæmt á og það að keyra hermun og taka upp vídeó af henni á sama tíma varð til þess að þessi hermun laggar ansi mikið.</p>
+  <br>
+  <iframe width="1000px" height="570px" allowfullscreen="true" src="https://haskoliislands.instructuremedia.com/embed/31e9be0f-1c64-4c49-8298-ef33f4e804c6" frameborder="0"></iframe>
+  <hr>
+  <br>
+  <h3>Tímaskráning</h3>
+  <p>Í töflunni hér að neðan má sjá þann tíma sem fór í verkefni 5 hjá mér, eftir verkþáttum.</p>
+  <style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}
+</style>
+<table class="center">
+<thead>
+  <tr>
+    <th class="tg-amwm">Verkþáttur</th>
+    <th class="tg-amwm">Tími</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-baqh">Hugmyndavinna og verkefnaskipting</td>
+    <td class="tg-baqh">2 klst</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">Útfæra skurðferla</td>
+    <td class="tg-baqh">4 klst</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">Herma skurðferla og taka upp myndbönd</td>
+    <td class="tg-baqh">1 klst</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">Skrásetning á sameiginlega vefsíðu</td>
+    <td class="tg-baqh">2 klst</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">Skrásetning á eigin vefsíðu</td>
+    <td class="tg-baqh">3 klst</td>
+  </tr>
+  <tr>
+    <td class="tg-amwm">Samtals</td>
+    <td class="tg-amwm">12 klst</td>
+  </tr>
+</tbody>
+</table>
+  <br>
+  <hr>
+  <br>
+  <h3>Leitarorð í verkefni 5</h3>
+  <p>"Toolpaths in Fusion360" <br> "CAM in fusion 360 complex shapes" <br> "Warning: Rest material adjustment reduced to maximum limit" </p>
+  <br>
+  <hr>
+  <br>
+  <h3>Vinnuskrá</h3>
+  <p><a href="V5 - vinnuskrar/Lokaverkefni v1.f3d" class="button">Fusion360 skrá verkefnisins</a></p>
+  <br>
+</body>
+</html>
